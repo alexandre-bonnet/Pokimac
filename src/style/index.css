@@ -1,3 +1,31 @@
 body {
-  background-image: url("../elements/test.png");
+  background-image: url("../elements/images/Index-background.png");
+}
+
+h1{
+  font-size: 3rem;
+  text-align: center;
+  margin:0;
+}
+
+#sous-titre{
+  font-size: 1rem;
+  color:var(--green-1);
+  text-align: center;
+  margin:0;
+}
+
+#copyright{
+  font-size: 0.8rem;
+  color:var(--green-4);
+  text-align: center; 
+  width:100%;
+  position: absolute;
+  bottom: 0;
+}
+
+div{
+  width: 100%;
+  position:absolute;
+  top:20%;
 }

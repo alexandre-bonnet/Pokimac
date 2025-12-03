@@ -35,3 +35,11 @@ body {
   box-shadow: -4px 0 0 0 var(--green-3), 4px 0 0 0 var(--green-3),
     0 -4px 0 0 var(--green-3), 0 4px 0 0 var(--green-3);
 }
+
+h1{
+  color: var(--green-1);
+  text-transform: uppercase;
+  text-shadow: -4px -4px 0 var(--green-4), 4px -4px 0 var(--green-4),
+    -4px 4px 0 var(--green-4), 4px 4px 0 var(--green-4);
+  text-align: center;
+}
