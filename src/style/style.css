@@ -3,3 +3,26 @@
   src: local(HankenGrotesk),
     url("../elements/fonts/playerSansMono/PlayerSansMono8x13-Classic.ttf");
 }
+
+:root {
+  --green-1: #0f3810;
+  --green-2: #1e661f;
+  --green-3: #8cac0e;
+  --green-4: #c6dd63;
+}
+
+* {
+  font-family: PlayerSansMono;
+}
+
+.pixel-btn {
+  background-color: var(--green-4);
+  color: var(--green-1);
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+
+  box-shadow: -4px 0 0 0 var(--green-3), 4px 0 0 0 var(--green-3),
+    0 -4px 0 0 var(--green-3), 0 4px 0 0 var(--green-3);
+}
