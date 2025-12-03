@@ -13,6 +13,7 @@
 
 * {
   font-family: PlayerSansMono;
+  color: var(--green-1);
 }
 
 body {
@@ -26,12 +27,13 @@ body {
 
 .pixel-btn {
   background-color: var(--green-4);
+  border: 3px solid var(--green-1);
   color: var(--green-1);
-  border: none;
   padding: 10px 20px;
   font-weight: bold;
   cursor: pointer;
+  margin: 6px;
 
-  box-shadow: -4px 0 0 0 var(--green-3), 4px 0 0 0 var(--green-3),
-    0 -4px 0 0 var(--green-3), 0 4px 0 0 var(--green-3);
+  box-shadow: -6px 0 0 0 var(--green-3), 6px 0 0 0 var(--green-3),
+    0 -6px 0 0 var(--green-3), 0 6px 0 0 var(--green-3);
 }

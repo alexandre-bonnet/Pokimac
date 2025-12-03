@@ -7,6 +7,53 @@
   </head>
   <body>
     <h1>Pokimac</h1>
-    <button class="pixel-btn">Test</button>
+    <div id="game-container">
+      <main>
+        <div id="question-container"><h2>Qui est ce Pokémon ?</h2></div>
+        <div id="image-container">
+          <img id="image-pokemon" alt="pokémon" />
+        </div>
+        <form onsubmit="submitAnswer(event)">
+          <input id="user-input" type="text" placeholder="Entrez un nom..." />
+          <input type="submit" class="pixel-btn" value=">" />
+        </form>
+        <div id="buttons-container">
+          <button class="pixel-btn" id="help-button" onclick="unblur()">
+            Aide
+          </button>
+          <button class="pixel-btn">Passer</button>
+        </div>
+      </main>
+      <aside>
+        <section>
+          <h2>Génération</h2>
+          <select>
+            <option>Première</option>
+            <option>Deuxième</option>
+            <option>Troisième</option>
+            <option>Quatrième</option>
+            <option>Cinquième</option>
+            <option>Sixième</option>
+            <option>Septième</option>
+            <option>Huitième</option>
+            <option>Neuvième</option>
+          </select>
+        </section>
+        <section>
+          <h2>Partie</h2>
+          <p>Pokémon : <span id="count-pokemons"></span></p>
+          <p>Score : <span id="count-score"></span></p>
+        </section>
+
+        <section id="rules">
+          <h2>Règles</h2>
+          <p>
+            Le but du jeu est d'attraper tous les pokémons, le bouton aide si on
+            a besoin d'aide, et le bouton envoyer sinon !
+          </p>
+        </section>
+      </aside>
+    </div>
+    <script src="../script/game.js"></script>
   </body>
 </html>
