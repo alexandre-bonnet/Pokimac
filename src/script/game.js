@@ -7,8 +7,10 @@ let score = 0;
 let nbHints = 0;
 
 async function getRandomPokemons() {
+  const genSelectElement = document.getElementById("gen-select");
+
   const response = await fetch(
-    `https://pokimac-api.super-sympa.fr/random?generation=1&count=${NB_POKEMONS}`
+    `https://pokimac-api.super-sympa.fr/random?generation=${genSelectElement.value}&count=${NB_POKEMONS}`
   );
   const data = await response.json();
 
@@ -24,7 +26,6 @@ function submitAnswer(e) {
     input.value.toLowerCase().trim() ===
     pokemons[currentPokemonIndex].name.toLowerCase()
   ) {
-    input.value = "";
     currentPokemonIndex++;
     score += 5;
     nbHints = 0;
@@ -40,7 +41,22 @@ function submitAnswer(e) {
   }
 }
 
+function skip() {
+  currentPokemonIndex++;
+  nbHints = 0;
+  const helpButton = document.getElementById("help-button");
+  helpButton.disabled = false;
+  if (currentPokemonIndex < NB_POKEMONS) {
+    updatePage();
+  } else {
+    endGame();
+  }
+}
+
 function updatePage() {
+  const input = document.getElementById("user-input");
+  input.value = "";
+
   const imageElement = document.getElementById("image-pokemon");
   imageElement.src = pokemons[currentPokemonIndex].image;
 

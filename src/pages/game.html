@@ -21,22 +21,22 @@
           <button class="pixel-btn" id="help-button" onclick="unblur()">
             Aide
           </button>
-          <button class="pixel-btn">Passer</button>
+          <button class="pixel-btn" onclick="skip()">Passer</button>
         </div>
       </main>
       <aside>
         <section>
           <h2>Génération</h2>
-          <select>
-            <option>Première</option>
-            <option>Deuxième</option>
-            <option>Troisième</option>
-            <option>Quatrième</option>
-            <option>Cinquième</option>
-            <option>Sixième</option>
-            <option>Septième</option>
-            <option>Huitième</option>
-            <option>Neuvième</option>
+          <select id="gen-select" onchange="getRandomPokemons()">
+            <option value="1">Première</option>
+            <option value="2">Deuxième</option>
+            <option value="3">Troisième</option>
+            <option value="4">Quatrième</option>
+            <option value="5">Cinquième</option>
+            <option value="6">Sixième</option>
+            <option value="7">Septième</option>
+            <option value="8">Huitième</option>
+            <option value="9">Neuvième</option>
           </select>
         </section>
         <section>
