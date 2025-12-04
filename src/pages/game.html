@@ -9,20 +9,22 @@
     <h1>Pokimac</h1>
     <div id="game-container">
       <main>
-        <div id="question-container"><h2>Qui est ce Pokémon ?</h2></div>
-        <div id="image-container">
-          <p>Chargement...</p>
-        </div>
-        <form onsubmit="submitAnswer(event)">
-          <input id="user-input" type="text" placeholder="Entrez un nom..." />
-          <input type="submit" class="pixel-btn" value=">" />
-        </form>
-        <div id="buttons-container">
-          <button class="pixel-btn" id="help-button" onclick="unblur()">
-            Aide
-          </button>
-          <button class="pixel-btn" onclick="skip()">Passer</button>
-        </div>
+        <section>
+          <div id="question-container"><h2>Qui est ce Pokémon ?</h2></div>
+          <div id="image-container">
+            <p>Chargement...</p>
+          </div>
+          <form onsubmit="submitAnswer(event)">
+            <input id="user-input" type="text" placeholder="Entrez un nom..." />
+            <input type="submit" class="pixel-btn" value=">" />
+          </form>
+          <div id="buttons-container">
+            <button class="pixel-btn" id="help-button" onclick="unblur()">
+              Aide
+            </button>
+            <button class="pixel-btn" onclick="skip()">Passer</button>
+          </div>
+        </section>
       </main>
       <aside>
         <section>
