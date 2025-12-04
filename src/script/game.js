@@ -108,6 +108,9 @@ function endGame() {
   const usernameInput = document.getElementById("username");
   usernameInput.value = "";
 
+  const resultsScoreElement = document.getElementById("results-score");
+  resultsScoreElement.textContent = score;
+
   const endDialong = document.getElementById("end-dialog");
   endDialong.showModal();
 }
