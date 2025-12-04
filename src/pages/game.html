@@ -11,7 +11,7 @@
       <main>
         <div id="question-container"><h2>Qui est ce Pokémon ?</h2></div>
         <div id="image-container">
-          <img id="image-pokemon" alt="pokémon" />
+          <p>Chargement...</p>
         </div>
         <form onsubmit="submitAnswer(event)">
           <input id="user-input" type="text" placeholder="Entrez un nom..." />
@@ -27,7 +27,7 @@
       <aside>
         <section>
           <h2>Génération</h2>
-          <select id="gen-select" onchange="getRandomPokemons()">
+          <select id="gen-select" onchange="reset()">
             <option value="1">Première</option>
             <option value="2">Deuxième</option>
             <option value="3">Troisième</option>
@@ -41,8 +41,8 @@
         </section>
         <section>
           <h2>Partie</h2>
-          <p>Pokémon : <span id="count-pokemons"></span></p>
-          <p>Score : <span id="count-score"></span></p>
+          <p>Pokémon : <span id="count-pokemons">0/10</span></p>
+          <p>Score : <span id="count-score">0</span></p>
         </section>
 
         <section id="rules">
@@ -54,6 +54,14 @@
         </section>
       </aside>
     </div>
+    <dialog id="end-dialog">
+      <h2>Partie terminée !</h2>
+      <p>Score : <span id="results-score"></span></p>
+      <p>Pour publier votre score, veuillez entrer un nom d'utilisateur.</p>
+      <input id="username" type="text" placeholder="Pseudo..." />
+      <button onclick="reset()">Ne pas publier</button>
+      <button onclick="publishScore()">Publier</button>
+    </dialog>
     <script src="../script/game.js"></script>
   </body>
 </html>

@@ -14,9 +14,25 @@ async function getRandomPokemons() {
   );
   const data = await response.json();
 
+  setIsLoading(false);
+
   pokemons = data.pokemons;
 
   updatePage();
+}
+
+function reset() {
+  pokemons = [];
+  currentPokemonIndex = 0;
+  score = 0;
+  nbHints = 0;
+
+  const endDialog = document.getElementById("end-dialog");
+  endDialog.close();
+
+  setIsLoading(true);
+
+  getRandomPokemons();
 }
 
 function submitAnswer(e) {
@@ -27,10 +43,8 @@ function submitAnswer(e) {
     pokemons[currentPokemonIndex].name.toLowerCase()
   ) {
     currentPokemonIndex++;
-    score += 5;
+    score += 5 - nbHints;
     nbHints = 0;
-    const helpButton = document.getElementById("help-button");
-    helpButton.disabled = false;
     if (currentPokemonIndex < NB_POKEMONS) {
       updatePage();
     } else {
@@ -44,8 +58,6 @@ function submitAnswer(e) {
 function skip() {
   currentPokemonIndex++;
   nbHints = 0;
-  const helpButton = document.getElementById("help-button");
-  helpButton.disabled = false;
   if (currentPokemonIndex < NB_POKEMONS) {
     updatePage();
   } else {
@@ -54,6 +66,9 @@ function skip() {
 }
 
 function updatePage() {
+  const helpButton = document.getElementById("help-button");
+  helpButton.disabled = false;
+
   const input = document.getElementById("user-input");
   input.value = "";
 
@@ -90,7 +105,49 @@ function updateBlur() {
 }
 
 function endGame() {
-  alert("fini");
+  const usernameInput = document.getElementById("username");
+  usernameInput.value = "";
+
+  const endDialong = document.getElementById("end-dialog");
+  endDialong.showModal();
+}
+
+function setIsLoading(isLoading) {
+  if (isLoading) {
+    const imageElement = document.getElementById("image-pokemon");
+
+    const imageContainer = document.getElementById("image-container");
+    const loadingText = document.createElement("p");
+    loadingText.textContent = "Chargement...";
+    imageContainer.replaceChild(loadingText, imageElement);
+  } else {
+    const imageElement = document.createElement("img");
+    imageElement.alt = "pokémon";
+    imageElement.id = "image-pokemon";
+
+    const imageContainer = document.getElementById("image-container");
+    const loadingText = imageContainer.querySelector("p");
+    imageContainer.replaceChild(imageElement, loadingText);
+  }
+}
+
+function publishScore() {
+  const usernameInput = document.getElementById("username");
+  const genSelectElement = document.getElementById("gen-select");
+
+  fetch("https://pokimac-api.super-sympa.fr/score", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      username: usernameInput.value,
+      score,
+      generation: +genSelectElement.value,
+    }),
+  });
+
+  reset();
 }
 
 document.addEventListener("DOMContentLoaded", () => {
