@@ -64,13 +64,16 @@ h2 {
 }
 
 input[type="text"] {
-  width: 100%;
   background-color: var(--green-4);
   border: 4px solid var(--green-1);
   padding: 10px;
   margin: 6px;
   box-shadow: -6px 0 0 0 var(--green-3), 6px 0 0 0 var(--green-3),
     0 -6px 0 0 var(--green-3), 0 6px 0 0 var(--green-3);
+}
+
+main input[type="text"] {
+  width: 100%;
 }
 
 button:disabled,
@@ -90,4 +93,52 @@ aside {
 form {
   display: flex;
   gap: 8px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+footer p {
+  color: var(--green-3);
+}
+
+dialog {
+  padding: 0;
+  background: transparent;
+  border: none;
+}
+
+dialog section,
+dialog form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+dialog section {
+  padding: 16px;
+}
+
+#dialog-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+#dialog-header button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: large;
+}
+
+#buttons-score {
+  display: flex;
+  justify-content: end;
+  gap: 16px;
 }

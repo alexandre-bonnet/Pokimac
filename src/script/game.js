@@ -131,7 +131,9 @@ function setIsLoading(isLoading) {
   }
 }
 
-function publishScore() {
+function publishScore(e) {
+  e.preventDefault();
+
   const usernameInput = document.getElementById("username");
   const genSelectElement = document.getElementById("gen-select");
 

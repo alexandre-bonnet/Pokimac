@@ -54,13 +54,24 @@
         </section>
       </aside>
     </div>
+    <footer>
+      <p>©2025 IMAC GAME</p>
+    </footer>
     <dialog id="end-dialog">
-      <h2>Partie terminée !</h2>
-      <p>Score : <span id="results-score"></span></p>
-      <p>Pour publier votre score, veuillez entrer un nom d'utilisateur.</p>
-      <input id="username" type="text" placeholder="Pseudo..." />
-      <button onclick="reset()">Ne pas publier</button>
-      <button onclick="publishScore()">Publier</button>
+      <section>
+        <div id="dialog-header">
+          <h2>Partie terminée !</h2>
+          <button onclick="reset()">X</button>
+        </div>
+        <p>Score : <span id="results-score"></span></p>
+        <p>Pour publier votre score, veuillez entrer un nom d'utilisateur.</p>
+        <form onsubmit="publishScore(event)">
+          <input id="username" type="text" placeholder="Pseudo..." />
+          <div id="buttons-score">
+            <input type="submit" class="pixel-btn" value="Publier" />
+          </div>
+        </form>
+      </section>
     </dialog>
     <script src="../script/game.js"></script>
   </body>
