@@ -48,3 +48,17 @@ div{
   51%{margin-top: 5px;}
   to{margin-top: 5px;}
 }
+
+@media screen and (min-Width:1000px) {
+  h1{
+    font-size: 4rem;
+  }
+
+  #sous-titre{
+  font-size: 1.3rem;
+  }
+}
+
+h1, #sous-titre {
+  transition: font-size .5s;
+}
