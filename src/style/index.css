@@ -6,6 +6,7 @@ h1{
   font-size: 3rem;
   text-align: center;
   margin:0;
+  animation:TitreMove 0.5s infinite alternate-reverse linear;
 }
 
 #sous-titre{
@@ -13,6 +14,8 @@ h1{
   color:var(--green-1);
   text-align: center;
   margin:0;
+  animation:SousTitreMove 0.5s infinite alternate-reverse linear;
+  animation-delay: 0.25s;
 }
 
 #copyright{
@@ -28,4 +31,20 @@ div{
   width: 100%;
   position:absolute;
   top:20%;
+}
+
+@keyframes TitreMove{
+  from{margin-top: 0px;}
+  25%{margin-top: 0px;}
+  26%{margin-top: 5px;}
+  74%{margin-top: 5px;}
+  75%{margin-top: 10px;}
+  to{margin-top: 10px;}
+}
+
+@keyframes SousTitreMove{
+  from{margin-top: 0px;}
+  50%{margin-top: 0px;}
+  51%{margin-top: 5px;}
+  to{margin-top: 5px;}
 }

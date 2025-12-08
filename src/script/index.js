@@ -1,6 +1,7 @@
 document.addEventListener("click",enter);
+document.addEventListener("keypress",enter);
 
 function enter(){
     window.location.href='./src/pages/home.html';
-    //document.getElementById("copyright").innerHTML = "YOU CLICKED ME!"
+    //document.getElementById("sous-titre").innerHTML = "Bienvenue !"
 }
