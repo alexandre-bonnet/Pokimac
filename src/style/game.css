@@ -1,3 +1,145 @@
 body {
   background-image: url("../elements/images/grass-background.png");
 }
+
+h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  text-shadow: -4px -4px 0 var(--green-4), 4px -4px 0 var(--green-4),
+    -4px 4px 0 var(--green-4), 4px 4px 0 var(--green-4);
+  text-align: center;
+}
+
+main section,
+aside {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+#question-container,
+aside section,
+dialog section {
+  background-color: var(--green-4);
+  border: 4px solid var(--green-1);
+  padding: 10px 30px;
+  margin: 6px;
+  box-shadow: -6px 0 0 0 var(--green-4), 6px 0 0 0 var(--green-4),
+    0 -6px 0 0 var(--green-4), 0 6px 0 0 var(--green-4);
+}
+
+h2 {
+  margin: 0;
+}
+
+#image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--green-4);
+  border: 4px solid var(--green-1);
+  padding: 10px 30px;
+  margin: 6px;
+  height: 475px;
+  width: 475px;
+  box-shadow: -6px 0 0 0 var(--green-3), 6px 0 0 0 var(--green-3),
+    0 -6px 0 0 var(--green-3), 0 6px 0 0 var(--green-3);
+}
+
+#game-container {
+  display: flex;
+  width: fit-content;
+  justify-content: center;
+  gap: 16px;
+}
+
+#buttons-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 16px;
+}
+
+#buttons-container button {
+  width: 50%;
+}
+
+input[type="text"] {
+  background-color: var(--green-4);
+  border: 4px solid var(--green-1);
+  padding: 10px;
+  margin: 6px;
+  box-shadow: -6px 0 0 0 var(--green-3), 6px 0 0 0 var(--green-3),
+    0 -6px 0 0 var(--green-3), 0 6px 0 0 var(--green-3);
+}
+
+main input[type="text"] {
+  width: 100%;
+}
+
+button:disabled,
+input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+aside {
+  max-width: 20%;
+}
+
+#rules {
+  height: 100%;
+}
+
+form {
+  display: flex;
+  gap: 8px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+footer p {
+  color: var(--green-3);
+}
+
+dialog {
+  padding: 0;
+  background: transparent;
+  border: none;
+}
+
+dialog section,
+dialog form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+dialog section {
+  padding: 16px;
+}
+
+#dialog-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+#dialog-header button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: large;
+}
+
+#buttons-score {
+  display: flex;
+  justify-content: end;
+  gap: 16px;
+}

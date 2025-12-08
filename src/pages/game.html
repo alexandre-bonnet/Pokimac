@@ -7,6 +7,74 @@
   </head>
   <body>
     <h1>Pokimac</h1>
-    <button class="pixel-btn">Test</button>
+    <div id="game-container">
+      <main>
+        <section>
+          <div id="question-container"><h2>Qui est ce Pokémon ?</h2></div>
+          <div id="image-container">
+            <p>Chargement...</p>
+          </div>
+          <form onsubmit="submitAnswer(event)">
+            <input id="user-input" type="text" placeholder="Entrez un nom..." />
+            <input type="submit" class="pixel-btn" value=">" />
+          </form>
+          <div id="buttons-container">
+            <button class="pixel-btn" id="help-button" onclick="unblur()">
+              Aide
+            </button>
+            <button class="pixel-btn" onclick="skip()">Passer</button>
+          </div>
+        </section>
+      </main>
+      <aside>
+        <section>
+          <h2>Génération</h2>
+          <select id="gen-select" onchange="reset()">
+            <option value="1">Première</option>
+            <option value="2">Deuxième</option>
+            <option value="3">Troisième</option>
+            <option value="4">Quatrième</option>
+            <option value="5">Cinquième</option>
+            <option value="6">Sixième</option>
+            <option value="7">Septième</option>
+            <option value="8">Huitième</option>
+            <option value="9">Neuvième</option>
+          </select>
+        </section>
+        <section>
+          <h2>Partie</h2>
+          <p>Pokémon : <span id="count-pokemons">0/10</span></p>
+          <p>Score : <span id="count-score">0</span></p>
+        </section>
+
+        <section id="rules">
+          <h2>Règles</h2>
+          <p>
+            Le but du jeu est d'attraper tous les pokémons, le bouton aide si on
+            a besoin d'aide, et le bouton envoyer sinon !
+          </p>
+        </section>
+      </aside>
+    </div>
+    <footer>
+      <p>©2025 IMAC GAME</p>
+    </footer>
+    <dialog id="end-dialog">
+      <section>
+        <div id="dialog-header">
+          <h2>Partie terminée !</h2>
+          <button onclick="reset()">X</button>
+        </div>
+        <p>Score : <span id="results-score"></span></p>
+        <p>Pour publier votre score, veuillez entrer un nom d'utilisateur.</p>
+        <form onsubmit="publishScore(event)">
+          <input id="username" type="text" placeholder="Pseudo..." />
+          <div id="buttons-score">
+            <input type="submit" class="pixel-btn" value="Publier" />
+          </div>
+        </form>
+      </section>
+    </dialog>
+    <script src="../script/game.js"></script>
   </body>
 </html>
