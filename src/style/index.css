@@ -5,7 +5,6 @@ body {
 h1{
   font-size: 3rem;
   text-align: center;
-  margin:0;
   animation:TitreMove 0.5s infinite alternate-reverse linear;
 }
 
@@ -21,10 +20,6 @@ h1{
 #copyright{
   font-size: 0.8rem;
   color:var(--green-4);
-  text-align: center; 
-  width:100%;
-  position: absolute;
-  bottom: 0;
 }
 
 div{

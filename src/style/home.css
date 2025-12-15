@@ -1,0 +1,56 @@
+body {
+  background-image: url("../elements/images/home-backrgound.png");
+  max-height: 100%;
+}
+
+#copyright{
+  font-size: 0.8rem;
+  color:var(--green-1);
+}
+
+.navButtons{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttonText{
+  font-size: 0;
+}
+.pixel-btn{
+  margin-bottom: 5%;
+  margin-left: 2%;
+  margin-right:2%;
+  width: 55%;
+  font-size: 1rem;
+  text-align: center;
+}
+
+h1{
+  font-size: 3rem;
+  padding-top: 5%;
+}
+
+@media screen and (min-Width:1000px){
+  h1{
+    font-size: 4rem;
+  }
+  .buttonText{
+  font-size: 0.5rem;
+  }
+  .navButtons{
+  margin-top:10%;
+  flex-direction: row;
+  }
+  .pixel-btn{
+  font-size: 2rem;
+  text-align: center;
+  height : 200px;
+  }
+
+}
+
+*{
+  transition: font-size .5s;
+}
