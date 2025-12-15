@@ -3,27 +3,6 @@ body {
     max-width: 100%;
 }
 
-header {
-    background-color: var(--green-1);
-    border: 4px solid var(--green-2);
-    padding: 10px 10px;
-    margin: 20px;
-    box-shadow: -6px 0 0 0 var(--green-1), 6px 0 0 0 var(--green-1),
-        0 -6px 0 0 var(--green-1), 0 6px 0 0 var(--green-1);
-}
-
-nav {
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    gap: 60px;
-}
-
-a {
-    color: var(--green-4);
-    text-decoration: none;
-}
-
 section {
     background-color: var(--green-4);
     border: 4px solid var(--green-2);
@@ -33,7 +12,7 @@ section {
         0 -6px 0 0 var(--green-4), 0 6px 0 0 var(--green-4);
 }
 
-.tab-content {
+.table-wrapper {
     margin: 20px 20px 20px;
     max-height: 500px;
     overflow-y: scroll;
@@ -64,6 +43,7 @@ td {
     vertical-align: middle;
     padding: 1em;
     word-break: break-word;
+
 }
 
 td {
