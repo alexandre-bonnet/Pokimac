@@ -20,6 +20,17 @@
   <h2>POKIDEX</h2>
   <section>
     <p>Choisis une génération</p>
+    <select id="gen-select" onchange="getPokemon()">
+      <option value="1">Première</option>
+      <option value="2">Deuxième</option>
+      <option value="3">Troisième</option>
+      <option value="4">Quatrième</option>
+      <option value="5">Cinquième</option>
+      <option value="6">Sixième</option>
+      <option value="7">Septième</option>
+      <option value="8">Huitième</option>
+      <option value="9">Neuvième</option>
+    </select>
   </section>
   <div class="tab-content">
     <table>
@@ -30,92 +41,7 @@
           <th>Types</th>
         </tr>
       </thead>
-      <tbody>
-        <tr>
-          <td>test</td>
-          <td>test</td>
-          <td>test</td>
-        </tr>
-        <tr>
-          <td>test</td>
-          <td>test</td>
-          <td>test</td>
-        </tr>
-        <tr>
-          <td>test</td>
-          <td>test</td>
-          <td>test</td>
-        </tr>
-        <tr>
-          <td>test</td>
-          <td>test</td>
-          <td>test</td>
-        </tr>
-        <tr>
-          <td>test</td>
-          <td>test</td>
-          <td>test</td>
-        </tr>
-        <tr>
-          <td>test</td>
-          <td>test</td>
-          <td>test</td>
-        </tr>
-        <tr>
-          <td>test</td>
-          <td>test</td>
-          <td>test</td>
-        </tr>
-        <tr>
-          <td>test</td>
-          <td>test</td>
-          <td>test</td>
-        </tr>
-        <tr>
-          <td>test</td>
-          <td>test</td>
-          <td>test</td>
-        </tr>
-        <tr>
-          <td>test</td>
-          <td>test</td>
-          <td>test</td>
-        </tr>
-        <tr>
-          <td>test</td>
-          <td>test</td>
-          <td>test</td>
-        </tr>
-        <tr>
-          <td>test</td>
-          <td>test</td>
-          <td>test</td>
-        </tr>
-        <tr>
-          <td>test</td>
-          <td>test</td>
-          <td>test</td>
-        </tr>
-        <tr>
-          <td>test</td>
-          <td>test</td>
-          <td>test</td>
-        </tr>
-        <tr>
-          <td>test</td>
-          <td>test</td>
-          <td>test</td>
-        </tr>
-        <tr>
-          <td>test</td>
-          <td>test</td>
-          <td>test</td>
-        </tr>
-        <tr>
-          <td>test</td>
-          <td>test</td>
-          <td>test</td>
-        </tr>
+      <tbody id="pokemons-list">
       </tbody>
 
     </table>
@@ -123,6 +49,7 @@
   <p id="credits">
     ©2025 IMAC GAME
   </p>
+  <script src="../script/pokidex.js"></script>
 </body>
 
 </html>

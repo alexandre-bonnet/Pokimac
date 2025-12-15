@@ -1,12 +1,39 @@
 let pokemons = [];
 
-async function getPokemon(){
-    const response = await fetch(
-        `https://pokimac-api.super-sympa.fr/generation/${1}` // on peut mettre une variable à la place du 1
-    );
-    const data = await response.json();
+async function getPokemon() {
 
-    console.log(data) // ça affiche dans la console le contenu tu peux regarder
+  const generation = document.getElementById('gen-select')
+
+  const response = await fetch(
+    `https://pokimac-api.super-sympa.fr/generation/${generation.value}` // on peut mettre une variable à la place du 1
+  );
+  const data = await response.json();
+
+  const listPokemons = document.getElementById('pokemons-list')
+
+  listPokemons.innerHTML = ""
+  
+  for (let pokemon of data.pokemons) {
+    const row = document.createElement('tr')
+    const imageTd = document.createElement('td')
+    const img = document.createElement('img')
+    img.src = pokemon.image
+    imageTd.appendChild(img)
+    const nameTd = document.createElement('td')
+    nameTd.innerText = pokemon.name
+    const typeTd = document.createElement('td')
+    for (let type of pokemon.types) {
+      const imgType = document.createElement('img')
+      imgType.src = type.image
+      typeTd.appendChild(imgType)
+    }
+    row.append(imageTd,nameTd,typeTd)
+    listPokemons.appendChild(row)
+  }
+
+
+
+  console.log(data) // ça affiche dans la console le contenu tu peux regarder
 
 }
 
