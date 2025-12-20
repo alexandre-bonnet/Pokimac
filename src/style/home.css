@@ -37,7 +37,7 @@ h1{
     font-size: 4rem;
   }
   .buttonText{
-  font-size: 0.5rem;
+  font-size: 1rem;
   }
   .navButtons{
   margin-top:10%;
@@ -46,7 +46,7 @@ h1{
   .pixel-btn{
   font-size: 2rem;
   text-align: center;
-  height : 200px;
+  height : 300px;
   }
 
 }
