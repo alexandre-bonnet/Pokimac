@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>POKIMAC-Home</title>
+    <link rel="icon" type="image/x-icon" href="../elements/images/favicon.svg">
     <link rel="stylesheet" href="../style/style.css" />
     <link rel="stylesheet" href="../style/home.css" />
 </head>
@@ -16,12 +17,13 @@
         <a href="game.html">Game</a>
         <a href="pokidex.html">Pokidex</a>
         <a href="scores.html">Scores</a>
-        <a href="#">About</a>
+        <a href="about.html">About</a>
       </div>
       <div class="nav-buttons">
-        <a href="../../index.html"><img src="../elements/images/button-back.png" alt=""></a>
-        <a href="home.html"><img src="../elements/images/play-button.png" alt=""></a>
-        <a href="home.html"><img src="../elements/images/pause-button.png" alt=""></a>
+                <a href="home.html"><img src="../elements/images/button-back.png" alt="back-home-button"></a>
+                <img id="play-btn" src="../elements/images/play-button.png" alt="play-musique-button">
+                <img id="pause-btn" src="../elements/images/pause-button.png" alt="pause-musique-button">
+        <audio id="bg-music" src="../elements/audio/opening-song.mp3" loop></audio>
       </div>
     </nav>
   </header>
@@ -37,6 +39,7 @@
                 à propos de l'équipe et du projet POKIMAC</p></button>
     </div>
     <p id="copyright">©2025 IMAC GAME</p>
+    <script src="../script/home.js"></script>
 </body>
 
 </html>
