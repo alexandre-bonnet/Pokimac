@@ -38,6 +38,13 @@ nav a {
     text-decoration: none;
 }
 
+a{
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 nav img {
     max-height: 30px;
 }
@@ -47,14 +54,12 @@ nav img {
   color:var(--green-1);
 }
 
-.navButtons{
+.navLinks{
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  flex-direction: row;
 }
 
-.buttonText{
+.linkText{
   font-size: 0;
 }
 .pixel-btn{
@@ -74,10 +79,10 @@ h1{
   h1{
     font-size: 4rem;
   }
-  .buttonText{
+  .linkText{
   font-size: 1rem;
   }
-  .navButtons{
+  .navLinks{
   margin-top:10%;
   flex-direction: row;
   }
