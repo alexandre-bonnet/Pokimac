@@ -112,13 +112,14 @@ tbody {
     max-width: 5rem;
 }
 
-h2 {
+h1 {
     font-size: 3rem;
     color: var(--green-1);
     text-transform: uppercase;
     text-shadow: -4px -4px 0 var(--green-4), 4px -4px 0 var(--green-4),
         -4px 4px 0 var(--green-4), 4px 4px 0 var(--green-4);
     text-align: center;
+
 }
 
 #copyright{
@@ -130,6 +131,10 @@ h2 {
     color: var(--green-4);
     background-color: var(--green-1);
     border: none;
+}
+
+section p {
+    margin: 5px;
 }
 
 @media screen and (min-Width:1000px) {
