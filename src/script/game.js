@@ -60,7 +60,7 @@ function submitAnswer(e) {
       imageContainer.classList.remove("error");
       input.classList.remove("error");
       submitButton.classList.remove("error");
-    }, 1000);
+    }, 750);
   }
 }
 
