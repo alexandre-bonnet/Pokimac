@@ -122,15 +122,13 @@ form {
 }
 
 footer {
-  position: absolute;
-  bottom: 0;
   width: 100%;
   display: flex;
   justify-content: center;
 }
 
 footer p {
-  color: var(--green-3);
+  color: var(--green-4);
 }
 
 dialog {
