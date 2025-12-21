@@ -28,7 +28,8 @@ a {
 
 .navLinks {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
 }
 
 .linkText {
