@@ -20,7 +20,7 @@ nav a {
   color: var(--green-1);
 }
 
-p {
+main p {
   font-size: 0.5rem;
 }
 
@@ -48,7 +48,7 @@ h1 {
   font-size: 3rem;
 }
 
-img {
+main img {
   padding: 5px;
   height: 60px;
   width: auto;
@@ -115,7 +115,7 @@ img {
     width: 60%;
   }
 
-  p {
+  main p {
     font-size: 0.7rem;
   }
 }

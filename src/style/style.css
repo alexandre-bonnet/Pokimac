@@ -118,10 +118,17 @@ nav {
   font-size: 0.75rem;
 }
 
-.nav-buttons {
+.music-controls {
   display: flex;
   justify-content: baseline;
   gap: 30px;
+}
+
+.music-controls button {
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
 }
 
 nav a {

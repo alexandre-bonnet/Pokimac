@@ -21,22 +21,24 @@
           <a href="scores.html">Scores</a>
           <a href="about.html">About</a>
         </div>
-        <div class="nav-buttons">
+        <div class="music-controls">
           <a href="home.html"
             ><img
               src="../elements/images/button-back.png"
               alt="back-home-button"
           /></a>
-          <img
-            id="play-btn"
-            src="../elements/images/play-button.png"
-            alt="play-musique-button"
-          />
-          <img
-            id="pause-btn"
-            src="../elements/images/pause-button.png"
-            alt="pause-musique-button"
-          />
+          <button onclick="playMusic()">
+            <img
+              src="../elements/images/play-button.png"
+              alt="Lecture de musique"
+            />
+          </button>
+          <button onclick="pauseMusic()">
+            <img
+              src="../elements/images/pause-button.png"
+              alt="Pause sur la musique"
+            />
+          </button>
           <audio
             id="bg-music"
             src="../elements/audio/opening-song.mp3"

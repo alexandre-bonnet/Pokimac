@@ -28,6 +28,11 @@ main {
   top: 20%;
 }
 
+h1,
+#sous-titre {
+  transition: font-size 0.5s;
+}
+
 @keyframes TitreMove {
   from {
     margin-top: 0px;
@@ -72,9 +77,4 @@ main {
   #sous-titre {
     font-size: 1.3rem;
   }
-}
-
-h1,
-#sous-titre {
-  transition: font-size 0.5s;
 }
