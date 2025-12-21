@@ -54,12 +54,15 @@ function submitAnswer(e) {
     input.classList.add("error");
     const imageContainer = document.getElementById("image-container");
     const submitButton = document.getElementById("submit-answer");
+    const errorText = document.getElementById("error-text");
     imageContainer.classList.add("error");
     submitButton.classList.add("error");
+    errorText.style.display = "unset";
     setTimeout(() => {
       imageContainer.classList.remove("error");
       input.classList.remove("error");
       submitButton.classList.remove("error");
+      errorText.style.display = "none";
     }, 750);
   }
 }
