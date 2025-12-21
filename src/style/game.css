@@ -73,6 +73,11 @@ dialog section {
 
 h2 {
   margin: 0;
+  word-break: break-all;
+}
+
+main h2 {
+  font-size: smaller;
 }
 
 #image-container {
@@ -83,11 +88,14 @@ h2 {
   border: 4px solid var(--green-1);
   padding: 10px 30px;
   margin: 6px auto;
-  max-height: 475px;
-  max-width: 475px;
-  width: 85%;
+  max-height: 250px;
   box-shadow: -6px 0 0 0 var(--green-3), 6px 0 0 0 var(--green-3),
     0 -6px 0 0 var(--green-3), 0 6px 0 0 var(--green-3);
+}
+
+#image-container img {
+  width: 100%;
+  height: 100%;
 }
 
 #game-container {
@@ -208,5 +216,13 @@ dialog section {
 
   aside {
     max-width: 20%;
+  }
+
+  #image-container {
+    max-height: 475px;
+  }
+
+  main h2 {
+    font-size: larger;
   }
 }
