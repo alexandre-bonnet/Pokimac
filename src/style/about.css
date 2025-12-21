@@ -24,12 +24,12 @@ p {
   font-size: 0.5rem;
 }
 
-#copyright {
+footer p {
   font-size: 0.8rem;
   color: var(--green-1);
 }
 
-#aboutWindow {
+#about-window {
   width: 70%;
   background-color: var(--green-4);
   border: 3px solid var(--green-1);
@@ -40,7 +40,7 @@ p {
     0 -6px 0 0 var(--green-3), 0 6px 0 0 var(--green-3);
   display: grid;
   grid-template-columns: 0.5fr 1fr 1fr 1fr 0.5fr;
-  gap: 0;
+  gap: 8px;
   align-items: center;
 }
 
@@ -111,23 +111,11 @@ img {
     font-size: 4rem;
   }
 
-  #aboutWindow {
+  #about-window {
     width: 60%;
   }
 
   p {
     font-size: 0.7rem;
-  }
-
-  nav {
-    justify-content: space-between;
-    flex-direction: row;
-  }
-
-  .nav-menu {
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    gap: 30px;
   }
 }

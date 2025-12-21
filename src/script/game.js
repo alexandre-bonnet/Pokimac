@@ -111,8 +111,8 @@ function endGame() {
   const resultsScoreElement = document.getElementById("results-score");
   resultsScoreElement.textContent = score;
 
-  const endDialong = document.getElementById("end-dialog");
-  endDialong.showModal();
+  const endDialog = document.getElementById("end-dialog");
+  endDialog.showModal();
 }
 
 function setIsLoading(isLoading) {
@@ -165,7 +165,7 @@ const imgs = document.querySelectorAll(".nav-buttons img");
 let x = null;
 
 function changeState(newState) {
-  imgs.forEach(img => img.classList.remove("active"));
+  imgs.forEach((img) => img.classList.remove("active"));
   x = newState;
   imgs[x].classList.add("active");
 
@@ -176,6 +176,9 @@ function changeState(newState) {
   }
 }
 
-document.getElementById("play-btn").addEventListener("click", () => changeState(1));
-document.getElementById("pause-btn").addEventListener("click", () => changeState(2));
-
+document
+  .getElementById("play-btn")
+  .addEventListener("click", () => changeState(1));
+document
+  .getElementById("pause-btn")
+  .addEventListener("click", () => changeState(2));

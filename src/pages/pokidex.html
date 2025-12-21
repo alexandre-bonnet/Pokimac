@@ -1,62 +1,78 @@
 <!DOCTYPE html>
 <html lang="fr">
+  <head>
+    <title>POKIMAC - Pokidex</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../elements/images/favicon.svg"
+    />
+    <link rel="stylesheet" href="../style/style.css" />
+    <link rel="stylesheet" href="../style/pokidex.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
 
-<head>
-  <title>POKIMAC-Pokidex</title>
-  <link rel="icon" type="image/x-icon" href="../elements/images/favicon.svg">
-  <link rel="stylesheet" href="../style/style.css" />
-  <link rel="stylesheet" href="../style/pokidex.css" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-</head>
-
-<body>
-  <header>
-    <nav>
-      <div class="nav-menu">
-        <a href="game.html">Game</a>
-        <a href="pokidex.html">Pokidex</a>
-        <a href="scores.html">Scores</a>
-        <a href="about.html">About</a>
-      </div>
-      <div class="nav-buttons">
-                <a href="home.html"><img src="../elements/images/button-back.png" alt="back-home-button"></a>
-                <img id="play-btn" src="../elements/images/play-button.png" alt="play-musique-button">
-                <img id="pause-btn" src="../elements/images/pause-button.png" alt="pause-musique-button">
-        <audio id="bg-music" src="../elements/audio/opening-song.mp3" loop></audio>
-      </div>
-    </nav>
-  </header>
-  <h1>Pokidex</h1>
-  <section>
-    <p>Choisis une génération</p>
-    <select id="gen-select" onchange="getPokemon()">
-      <option value="1">Première</option>
-      <option value="2">Deuxième</option>
-      <option value="3">Troisième</option>
-      <option value="4">Quatrième</option>
-      <option value="5">Cinquième</option>
-      <option value="6">Sixième</option>
-      <option value="7">Septième</option>
-      <option value="8">Huitième</option>
-      <option value="9">Neuvième</option>
-    </select>
-  </section>
-  <div class="tab-content">
-    <table>
-      <thead>
-        <tr>
-          <th>Apparence</th>
-          <th>Pokémon</th>
-          <th>Types</th>
-        </tr>
-      </thead>
-      <tbody id="pokemons-list">
-      </tbody>
-
-    </table>
-  </div>
-  <p id="copyright">©2025 IMAC GAME</p>
-  <script src="../script/pokidex.js"></script>
-</body>
-
+  <body>
+    <header>
+      <nav>
+        <div class="nav-menu">
+          <a href="game.html">Game</a>
+          <a href="pokidex.html">Pokidex</a>
+          <a href="scores.html">Scores</a>
+          <a href="about.html">About</a>
+        </div>
+        <div class="nav-buttons">
+          <a href="home.html"
+            ><img
+              src="../elements/images/button-back.png"
+              alt="back-home-button"
+          /></a>
+          <img
+            id="play-btn"
+            src="../elements/images/play-button.png"
+            alt="play-musique-button"
+          />
+          <img
+            id="pause-btn"
+            src="../elements/images/pause-button.png"
+            alt="pause-musique-button"
+          />
+          <audio
+            id="bg-music"
+            src="../elements/audio/opening-song.mp3"
+            loop
+          ></audio>
+        </div>
+      </nav>
+    </header>
+    <h1>Pokidex</h1>
+    <section>
+      <p>Choisis une génération</p>
+      <select id="gen-select" onchange="getPokemon()">
+        <option value="1">Première</option>
+        <option value="2">Deuxième</option>
+        <option value="3">Troisième</option>
+        <option value="4">Quatrième</option>
+        <option value="5">Cinquième</option>
+        <option value="6">Sixième</option>
+        <option value="7">Septième</option>
+        <option value="8">Huitième</option>
+        <option value="9">Neuvième</option>
+      </select>
+    </section>
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Apparence</th>
+            <th>Pokémon</th>
+            <th>Types</th>
+          </tr>
+        </thead>
+        <tbody id="pokemons-list"></tbody>
+      </table>
+    </div>
+    <footer><p>©2025 IMAC GAME</p></footer>
+    <script src="../script/pokidex.js"></script>
+  </body>
 </html>

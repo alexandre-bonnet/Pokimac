@@ -3,17 +3,6 @@ body {
   background-image: url("../elements/images/grass-background.png");
 }
 
-header {
-  background-color: var(--green-1);
-  border: 4px solid var(--green-2);
-  box-shadow: -6px 0 0 0 var(--green-1), 6px 0 0 0 var(--green-1),
-    0 -6px 0 0 var(--green-1), 0 6px 0 0 var(--green-1);
-}
-
-nav a {
-  color: var(--green-4);
-}
-
 h1 {
   font-size: 3rem;
   text-transform: uppercase;
@@ -121,14 +110,12 @@ form {
   gap: 8px;
 }
 
-footer {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
 footer p {
   color: var(--green-4);
+}
+
+footer {
+  position: unset;
 }
 
 dialog {
@@ -146,6 +133,14 @@ dialog form {
 
 dialog section {
   padding: 16px;
+}
+
+dialog p {
+  font-size: 0.7rem;
+}
+
+dialog h2 {
+  font-size: 1.2rem;
 }
 
 #dialog-header {
@@ -168,18 +163,6 @@ dialog section {
 }
 
 @media screen and (min-width: 1000px) {
-  nav {
-    justify-content: space-between;
-    flex-direction: row;
-  }
-
-  .nav-menu {
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    gap: 30px;
-  }
-
   #game-container {
     flex-direction: row;
   }
@@ -194,5 +177,13 @@ dialog section {
 
   main h2 {
     font-size: larger;
+  }
+
+  dialog p {
+    font-size: 1rem;
+  }
+
+  dialog h2 {
+    font-size: 1.5rem;
   }
 }
