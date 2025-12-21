@@ -1,122 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <link rel="stylesheet" href="../style/style.css" />
     <link rel="stylesheet" href="../style/scores.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>scores</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <h2>SCORES</h2>
     <section>
-        <p>Choisis une génération</p>
+      <p>Choisis une génération</p>
+      <select id="gen-select" onchange="getScores()">
+        <option value="1">Première</option>
+        <option value="2">Deuxième</option>
+        <option value="3">Troisième</option>
+        <option value="4">Quatrième</option>
+        <option value="5">Cinquième</option>
+        <option value="6">Sixième</option>
+        <option value="7">Septième</option>
+        <option value="8">Huitième</option>
+        <option value="9">Neuvième</option>
+      </select>
     </section>
     <div class="table-wrapper">
-        <table>
-            <thead>
-                <tr>
-                    <th>Utilisateur</th>
-                    <th>Score</th>
-                    <th>Rang</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>test</td>
-                    <td>test</td>
-                    <td>test</td>
-                </tr>
-                <tr>
-                    <td>test</td>
-                    <td>test</td>
-                    <td>test</td>
-                </tr>
-                <tr>
-                    <td>test</td>
-                    <td>test</td>
-                    <td>test</td>
-                </tr>
-                <tr>
-                    <td>test</td>
-                    <td>test</td>
-                    <td>test</td>
-                </tr>
-                <tr>
-                    <td>test</td>
-                    <td>test</td>
-                    <td>test</td>
-                </tr>
-                <tr>
-                    <td>test</td>
-                    <td>test</td>
-                    <td>test</td>
-                </tr>
-                <tr>
-                    <td>test</td>
-                    <td>test</td>
-                    <td>test</td>
-                </tr>
-                <tr>
-                    <td>test</td>
-                    <td>test</td>
-                    <td>test</td>
-                </tr>
-                <tr>
-                    <td>test</td>
-                    <td>test</td>
-                    <td>test</td>
-                </tr>
-                <tr>
-                    <td>test</td>
-                    <td>test</td>
-                    <td>test</td>
-                </tr>
-                <tr>
-                    <td>test</td>
-                    <td>test</td>
-                    <td>test</td>
-                </tr>
-                <tr>
-                    <td>test</td>
-                    <td>test</td>
-                    <td>test</td>
-                </tr>
-                <tr>
-                    <td>test</td>
-                    <td>test</td>
-                    <td>test</td>
-                </tr>
-                <tr>
-                    <td>test</td>
-                    <td>test</td>
-                    <td>test</td>
-                </tr>
-                <tr>
-                    <td>test</td>
-                    <td>test</td>
-                    <td>test</td>
-                </tr>
-                <tr>
-                    <td>test</td>
-                    <td>test</td>
-                    <td>test</td>
-                </tr>
-                <tr>
-                    <td>test</td>
-                    <td>test</td>
-                    <td>test</td>
-                </tr>
-            </tbody>
-
-        </table>
+      <table>
+        <thead>
+          <tr>
+            <th>Rang</th>
+            <th>Joueur</th>
+            <th>Score</th>
+          </tr>
+        </thead>
+        <tbody id="scores-list"></tbody>
+      </table>
     </div>
-    <p id="credits">
-        ©2025 IMAC GAME
-    </p>
-
-</body>
-
+    <p id="credits">©2025 IMAC GAME</p>
+    <script src="../script//scores.js"></script>
+  </body>
 </html>
