@@ -43,3 +43,4 @@ async function getPokemon() {
 document.addEventListener("DOMContentLoaded", () => { // pour lancer des trucs au lancement de la page
   getPokemon();
 });
+
