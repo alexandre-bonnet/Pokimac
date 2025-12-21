@@ -12,7 +12,7 @@ h1 {
   font-size: 1rem;
   color: var(--green-1);
   text-align: center;
-  margin: 0;
+  padding: 0;
   animation: SousTitreMove 0.5s infinite alternate-reverse linear;
   animation-delay: 0.25s;
 }
@@ -56,16 +56,16 @@ h1,
 
 @keyframes SousTitreMove {
   from {
-    margin-top: 0px;
+    padding-top: 0px;
   }
   50% {
-    margin-top: 0px;
+    padding-top: 0px;
   }
   51% {
-    margin-top: 5px;
+    padding-top: 5px;
   }
   to {
-    margin-top: 5px;
+    padding-top: 5px;
   }
 }
 
