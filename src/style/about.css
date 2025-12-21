@@ -6,46 +6,18 @@ body {
 header {
   background-color: var(--green-4);
   border: 4px solid var(--green-1);
-  padding: 10px 10px;
-  margin: 20px;
   box-shadow: -6px 0 0 0 var(--green-4), 6px 0 0 0 var(--green-4),
     0 -6px 0 0 var(--green-4), 0 6px 0 0 var(--green-4);
 }
 
-main{
+main {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-nav {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-}
-
-.nav-menu {
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  gap: 15px;
-  font-size: 0.75rem;
-}
-
-.nav-buttons {
-  display: flex;
-  justify-content: baseline;
-  gap: 30px;
 }
 
 nav a {
   color: var(--green-1);
-  text-decoration: none;
-}
-
-nav img {
-  max-height: 30px;
 }
 
 p {
@@ -88,7 +60,6 @@ img {
 
   grid-row-end: 2;
   grid-column-end: 2;
-
 }
 
 #item-1 {
@@ -98,7 +69,6 @@ img {
 
   grid-row-end: 2;
   grid-column-end: 6;
-
 }
 
 #item-2 {
@@ -108,7 +78,6 @@ img {
 
   grid-row-end: 3;
   grid-column-end: 5;
-
 }
 
 #item-3 {
@@ -118,7 +87,6 @@ img {
 
   grid-row-end: 3;
   grid-column-end: 6;
-
 }
 
 #item-4 {
@@ -127,7 +95,6 @@ img {
 
   grid-row-end: 4;
   grid-column-end: 2;
-
 }
 
 #item-5 {
@@ -137,10 +104,9 @@ img {
 
   grid-row-end: 4;
   grid-column-end: 6;
-
 }
 
-@media screen and (min-Width:1000px) {
+@media screen and (min-width: 1000px) {
   h1 {
     font-size: 4rem;
   }
