@@ -1,44 +1,45 @@
 body {
+  overflow-y: auto;
   background-image: url("../elements/images/grass-background.png");
 }
 
 header {
-    background-color: var(--green-1);
-    border: 4px solid var(--green-2);
-    padding: 10px 10px;
-    margin: 20px;
-    box-shadow: -6px 0 0 0 var(--green-1), 6px 0 0 0 var(--green-1),
-        0 -6px 0 0 var(--green-1), 0 6px 0 0 var(--green-1);
+  background-color: var(--green-1);
+  border: 4px solid var(--green-2);
+  padding: 10px 10px;
+  margin: 20px;
+  box-shadow: -6px 0 0 0 var(--green-1), 6px 0 0 0 var(--green-1),
+    0 -6px 0 0 var(--green-1), 0 6px 0 0 var(--green-1);
 }
 
 nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
 }
 
 .nav-menu {
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    gap: 15px;
-    font-size: 0.75rem;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 15px;
+  font-size: 0.75rem;
 }
 
 .nav-buttons {
-    display: flex;
-    justify-content: baseline;
-    gap: 30px;
+  display: flex;
+  justify-content: baseline;
+  gap: 30px;
 }
 
 nav a {
-    color: var(--green-4);
-    text-decoration: none;
+  color: var(--green-4);
+  text-decoration: none;
 }
 
 nav img {
-    max-height: 30px;
+  max-height: 30px;
 }
 
 h1 {
@@ -52,8 +53,11 @@ h1 {
 main section,
 aside {
   display: flex;
-  flex-direction: column;
   gap: 16px;
+}
+
+main section {
+  flex-direction: column;
 }
 
 #question-container,
@@ -78,18 +82,20 @@ h2 {
   background-color: var(--green-4);
   border: 4px solid var(--green-1);
   padding: 10px 30px;
-  margin: 6px;
-  height: 475px;
-  width: 475px;
+  margin: 6px auto;
+  max-height: 475px;
+  max-width: 475px;
+  width: 85%;
   box-shadow: -6px 0 0 0 var(--green-3), 6px 0 0 0 var(--green-3),
     0 -6px 0 0 var(--green-3), 0 6px 0 0 var(--green-3);
 }
 
 #game-container {
   display: flex;
-  width: fit-content;
+  flex-direction: column;
   justify-content: center;
   gap: 16px;
+  margin: 0 32px;
 }
 
 #buttons-container {
@@ -123,7 +129,7 @@ input:disabled {
 }
 
 aside {
-  max-width: 20%;
+  flex-direction: column;
 }
 
 #rules {
@@ -183,18 +189,24 @@ dialog section {
   gap: 16px;
 }
 
-@media screen and (min-Width:1000px) {
+@media screen and (min-width: 1000px) {
+  nav {
+    justify-content: space-between;
+    flex-direction: row;
+  }
 
-    nav {
-        justify-content: space-between;
-        flex-direction:row;
-    }
+  .nav-menu {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 30px;
+  }
 
-    .nav-menu {
-        display: flex;
-        justify-content: end;
-        align-items: center;
-        gap: 30px;
-    }
+  #game-container {
+    flex-direction: row;
+  }
 
+  aside {
+    max-width: 20%;
+  }
 }

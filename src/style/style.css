@@ -38,7 +38,7 @@ body {
     0 -6px 0 0 var(--green-3), 0 6px 0 0 var(--green-3);
 }
 
-h1{
+h1 {
   color: var(--green-1);
   text-transform: uppercase;
   text-shadow: -4px -4px 0 var(--green-4), 4px -4px 0 var(--green-4),
@@ -46,9 +46,15 @@ h1{
   text-align: center;
 }
 
-#copyright{
-  text-align: center; 
-  width:100%;
+#copyright {
+  text-align: center;
+  width: 100%;
   position: absolute;
   bottom: 0;
+}
+
+#gen-select {
+  color: var(--green-4);
+  background-color: var(--green-1);
+  border: none;
 }
