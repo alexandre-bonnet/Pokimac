@@ -5,7 +5,6 @@ body {
 h1{
   font-size: 3rem;
   text-align: center;
-  margin:0;
   animation:TitreMove 0.5s infinite alternate-reverse linear;
 }
 
@@ -21,10 +20,6 @@ h1{
 #copyright{
   font-size: 0.8rem;
   color:var(--green-4);
-  text-align: center; 
-  width:100%;
-  position: absolute;
-  bottom: 0;
 }
 
 div{
@@ -47,4 +42,18 @@ div{
   50%{margin-top: 0px;}
   51%{margin-top: 5px;}
   to{margin-top: 5px;}
+}
+
+@media screen and (min-Width:1000px) {
+  h1{
+    font-size: 4rem;
+  }
+
+  #sous-titre{
+  font-size: 1.3rem;
+  }
+}
+
+h1, #sous-titre {
+  transition: font-size .5s;
 }

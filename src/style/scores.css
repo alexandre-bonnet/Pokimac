@@ -3,6 +3,45 @@ body {
     max-width: 100%;
 }
 
+header {
+    background-color: var(--green-1);
+    border: 4px solid var(--green-2);
+    padding: 10px 10px;
+    margin: 20px;
+    box-shadow: -6px 0 0 0 var(--green-1), 6px 0 0 0 var(--green-1),
+        0 -6px 0 0 var(--green-1), 0 6px 0 0 var(--green-1);
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 15px;
+    font-size: 0.75rem;
+}
+
+.nav-buttons {
+    display: flex;
+    justify-content: baseline;
+    gap: 30px;
+}
+
+nav a {
+    color: var(--green-4);
+    text-decoration: none;
+}
+
+nav img {
+    max-height: 30px;
+}
+
 section {
     background-color: var(--green-4);
     border: 4px solid var(--green-2);
@@ -64,14 +103,23 @@ h2 {
     text-align: center;
 }
 
-p {
-    font-size: 0.75rem;
-    color: var(--green-2);
-    margin: 0;
+#copyright{
+  font-size: 0.8rem;
+  color: var(--green-4);
 }
 
-#credits {
-    font-size: 0.75rem;
-    color: var(--green-1);
-    text-align: center;
+@media screen and (min-Width:1000px) {
+
+    nav {
+        justify-content: space-between;
+        flex-direction:row;
+    }
+
+    .nav-menu {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        gap: 30px;
+    }
+
 }

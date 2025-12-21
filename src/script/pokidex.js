@@ -17,13 +17,16 @@ async function getPokemon() {
     const row = document.createElement('tr')
     const imageTd = document.createElement('td')
     const img = document.createElement('img')
+    img.classList.add("img-pokemon")
     img.src = pokemon.image
     imageTd.appendChild(img)
     const nameTd = document.createElement('td')
     nameTd.innerText = pokemon.name
     const typeTd = document.createElement('td')
+    typeTd.classList.add("type-container")
     for (let type of pokemon.types) {
       const imgType = document.createElement('img')
+      imgType.classList.add("img-type")
       imgType.src = type.image
       typeTd.appendChild(imgType)
     }
@@ -40,3 +43,23 @@ async function getPokemon() {
 document.addEventListener("DOMContentLoaded", () => { // pour lancer des trucs au lancement de la page
   getPokemon();
 });
+
+//audio de la nav bar
+const audio = document.getElementById("bg-music");
+const imgs = document.querySelectorAll(".nav-buttons img");
+let x = null;
+
+function changeState(newState) {
+  imgs.forEach(img => img.classList.remove("active"));
+  x = newState;
+  imgs[x].classList.add("active");
+
+  if (x == 1) {
+    audio.play();
+  } else if (x == 2) {
+    audio.pause();
+  }
+}
+
+document.getElementById("play-btn").addEventListener("click", () => changeState(1));
+document.getElementById("pause-btn").addEventListener("click", () => changeState(2));

@@ -45,3 +45,10 @@ h1{
     -4px 4px 0 var(--green-4), 4px 4px 0 var(--green-4);
   text-align: center;
 }
+
+#copyright{
+  text-align: center; 
+  width:100%;
+  position: absolute;
+  bottom: 0;
+}

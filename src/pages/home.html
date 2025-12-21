@@ -1,11 +1,42 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>POKIMAC-Home</title>
+    <link rel="stylesheet" href="../style/style.css" />
+    <link rel="stylesheet" href="../style/home.css" />
 </head>
+
 <body>
-    <h1>HOME</h1>
+  <header>
+    <nav>
+      <div class="nav-menu">
+        <a href="game.html">Game</a>
+        <a href="pokidex.html">Pokidex</a>
+        <a href="scores.html">Scores</a>
+        <a href="#">About</a>
+      </div>
+      <div class="nav-buttons">
+        <a href="home.html"><img src="../elements/images/button-back.png" alt=""></a>
+        <a href="home.html"><img src="../elements/images/play-button.png" alt=""></a>
+        <a href="home.html"><img src="../elements/images/pause-button.png" alt=""></a>
+      </div>
+    </nav>
+  </header>
+    <h1>Pokimac</h1>
+    <div class="navButtons">
+        <button class="pixel-btn" onclick="window.location.href='./game.html'">Jeu<p class="buttonText">Testez votre
+                savoir à propos des Pokémons</p></button>
+        <button class="pixel-btn" onclick="window.location.href='./pokidex.html'">Pokidex<p class="buttonText">Entraînez
+                vous avant de lancer une partie</p></button>
+        <button class="pixel-btn" onclick="window.location.href='./score.html'">Scores<p class="buttonText">Consultez
+                votre nombre de point et ceux de vos amis</p></button>
+        <button class="pixel-btn" onclick="window.location.href='./about.html'">About<p class="buttonText">Découvez tout
+                à propos de l'équipe et du projet POKIMAC</p></button>
+    </div>
+    <p id="copyright">©2025 IMAC GAME</p>
 </body>
+
 </html>

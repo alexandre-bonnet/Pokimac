@@ -1,0 +1,107 @@
+body {
+  background-image: url("../elements/images/home-backrgound.png");
+  max-height: 100%;
+}
+
+header {
+    background-color: var(--green-4);
+    border: 4px solid var(--green-1);
+    padding: 10px 10px;
+    margin: 20px;
+    box-shadow: -6px 0 0 0 var(--green-4), 6px 0 0 0 var(--green-4),
+        0 -6px 0 0 var(--green-4), 0 6px 0 0 var(--green-4);
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 15px;
+    font-size: 0.75rem;
+}
+
+.nav-buttons {
+    display: flex;
+    justify-content: baseline;
+    gap: 30px;
+}
+
+nav a {
+    color: var(--green-1);
+    text-decoration: none;
+}
+
+nav img {
+    max-height: 30px;
+}
+
+#copyright{
+  font-size: 0.8rem;
+  color:var(--green-1);
+}
+
+.navButtons{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttonText{
+  font-size: 0;
+}
+.pixel-btn{
+  margin-bottom: 5%;
+  margin-left: 2%;
+  margin-right:2%;
+  width: 55%;
+  font-size: 1rem;
+  text-align: center;
+}
+
+h1{
+  font-size: 3rem;
+  padding-top: 5%;
+}
+
+@media screen and (min-Width:1000px){
+  h1{
+    font-size: 4rem;
+  }
+  .buttonText{
+  font-size: 1rem;
+  }
+  .navButtons{
+  margin-top:10%;
+  flex-direction: row;
+  }
+  .pixel-btn{
+  font-size: 2rem;
+  text-align: center;
+  height : 300px;
+  }
+
+    nav {
+        justify-content: space-between;
+        flex-direction:row;
+    }
+
+    .nav-menu {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        gap: 30px;
+    }
+
+}
+
+*{
+  transition: font-size .5s;
+}

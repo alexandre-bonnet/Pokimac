@@ -14,14 +14,32 @@ header {
 
 nav {
     display: flex;
-    justify-content: end;
+    flex-direction: column;
     align-items: center;
-    gap: 60px;
+    gap: 15px;
 }
 
-a {
+.nav-menu {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 15px;
+    font-size: 0.75rem;
+}
+
+.nav-buttons {
+    display: flex;
+    justify-content: baseline;
+    gap: 30px;
+}
+
+nav a {
     color: var(--green-4);
     text-decoration: none;
+}
+
+nav img {
+    max-height: 30px;
 }
 
 section {
@@ -31,6 +49,9 @@ section {
     margin: 20px;
     box-shadow: -6px 0 0 0 var(--green-4), 6px 0 0 0 var(--green-4),
         0 -6px 0 0 var(--green-4), 0 6px 0 0 var(--green-4);
+    display: flex;
+    justify-content: center;
+    gap: 15px;
 }
 
 .tab-content {
@@ -59,11 +80,12 @@ thead {
 
 th,
 td {
-    font-size: 0.75rem;
+    font-size: 0.6rem;
     text-align: center;
     vertical-align: middle;
     padding: 1em;
-    word-break: break-word;
+    /* word-break: break-word; */
+
 }
 
 td {
@@ -75,6 +97,21 @@ tbody {
     color: var(--green-2);
 }
 
+.img-pokemon {
+    max-height: 10vh;
+    max-width: auto;
+}
+
+.type-container {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.img-type {
+    max-height: auto;
+    max-width: 5rem;
+}
+
 h2 {
     font-size: 3rem;
     color: var(--green-1);
@@ -84,14 +121,29 @@ h2 {
     text-align: center;
 }
 
-p {
-    font-size: 0.75rem;
-    color: var(--green-2);
-    margin: 0;
+#copyright{
+  font-size: 0.8rem;
+  color: var(--green-4);
 }
 
-#credits {
-    font-size: 0.75rem;
-    color: var(--green-1);
-    text-align: center;
+#gen-select {
+    color: var(--green-4);
+    background-color: var(--green-1);
+    border: none;
+}
+
+@media screen and (min-Width:1000px) {
+
+    nav {
+        justify-content: space-between;
+        flex-direction:row;
+    }
+
+    .nav-menu {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        gap: 30px;
+    }
+
 }

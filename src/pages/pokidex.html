@@ -11,10 +11,18 @@
 <body>
   <header>
     <nav>
-      <a href="#"><img src="../elements/images/button-back.png" alt=""></a>
-      <a href="#">Game</a>
-      <a href="#">Pokidex</a>
-      <a href="#">About</a>
+      <div class="nav-menu">
+        <a href="game.html">Game</a>
+        <a href="pokidex.html">Pokidex</a>
+        <a href="scores.html">Scores</a>
+        <a href="#">About</a>
+      </div>
+      <div class="nav-buttons">
+        <a href="home.html"><img src="../elements/images/button-back.png" alt=""></a>
+        <img id="play-btn" src="../elements/images/play-button.png" alt="">
+        <img id="pause-btn" src="../elements/images/pause-button.png" alt="">
+        <audio id="bg-music" src="../elements/audio/opening-song.mp3" loop></audio>
+      </div>
     </nav>
   </header>
   <h2>POKIDEX</h2>
@@ -46,9 +54,7 @@
 
     </table>
   </div>
-  <p id="credits">
-    ©2025 IMAC GAME
-  </p>
+  <p id="copyright">©2025 IMAC GAME</p>
   <script src="../script/pokidex.js"></script>
 </body>
 
