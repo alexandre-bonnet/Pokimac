@@ -1,7 +1,6 @@
-document.addEventListener("click",enter);
-document.addEventListener("keypress",enter);
+document.addEventListener("click", enter);
+document.addEventListener("keypress", enter);
 
-function enter(){
-    window.location.href='./src/pages/home.html';
-    //document.getElementById("sous-titre").innerHTML = "Bienvenue !"
+function enter() {
+  window.location.href = "./src/pages/home.html";
 }

@@ -46,34 +46,37 @@
         </div>
       </nav>
     </header>
-    <h1>SCORES</h1>
-    <section>
-      <p>Choisis une génération</p>
-      <select id="gen-select" onchange="getScores()">
-        <option value="1">Première</option>
-        <option value="2">Deuxième</option>
-        <option value="3">Troisième</option>
-        <option value="4">Quatrième</option>
-        <option value="5">Cinquième</option>
-        <option value="6">Sixième</option>
-        <option value="7">Septième</option>
-        <option value="8">Huitième</option>
-        <option value="9">Neuvième</option>
-      </select>
-    </section>
-    <div class="table-container">
-      <table>
-        <thead>
-          <tr>
-            <th>Rang</th>
-            <th>Joueur</th>
-            <th>Score</th>
-          </tr>
-        </thead>
-        <tbody id="scores-list"></tbody>
-      </table>
-    </div>
+    <main>
+      <h1>SCORES</h1>
+      <div class="gen-container">
+        <p>Choisis une génération</p>
+        <select id="gen-select" onchange="getScores()">
+          <option value="1">Première</option>
+          <option value="2">Deuxième</option>
+          <option value="3">Troisième</option>
+          <option value="4">Quatrième</option>
+          <option value="5">Cinquième</option>
+          <option value="6">Sixième</option>
+          <option value="7">Septième</option>
+          <option value="8">Huitième</option>
+          <option value="9">Neuvième</option>
+        </select>
+      </div>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Rang</th>
+              <th>Joueur</th>
+              <th>Score</th>
+            </tr>
+          </thead>
+          <tbody id="scores-list"></tbody>
+        </table>
+      </div>
+    </main>
     <footer><p>©2025 IMAC GAME</p></footer>
-    <script src="../script//scores.js"></script>
+    <script src="../script/scores.js"></script>
+    <script src="../script/navbar.js"></script>
   </body>
 </html>

@@ -1,65 +1,39 @@
 let pokemons = [];
 
 async function getPokemon() {
-
-  const generation = document.getElementById('gen-select')
+  const generation = document.getElementById("gen-select");
 
   const response = await fetch(
-    `https://pokimac-api.super-sympa.fr/generation/${generation.value}` // on peut mettre une variable à la place du 1
+    `https://pokimac-api.super-sympa.fr/generation/${generation.value}`
   );
   const data = await response.json();
 
-  const listPokemons = document.getElementById('pokemons-list')
+  const listPokemons = document.getElementById("pokemons-list");
 
-  listPokemons.innerHTML = ""
-  
+  listPokemons.innerHTML = "";
+
   for (let pokemon of data.pokemons) {
-    const row = document.createElement('tr')
-    const imageTd = document.createElement('td')
-    const img = document.createElement('img')
-    img.classList.add("img-pokemon")
-    img.src = pokemon.image
-    imageTd.appendChild(img)
-    const nameTd = document.createElement('td')
-    nameTd.innerText = pokemon.name
-    const typeTd = document.createElement('td')
-    typeTd.classList.add("type-container")
+    const row = document.createElement("tr");
+    const imageTd = document.createElement("td");
+    const img = document.createElement("img");
+    img.classList.add("img-pokemon");
+    img.src = pokemon.image;
+    imageTd.appendChild(img);
+    const nameTd = document.createElement("td");
+    nameTd.innerText = pokemon.name;
+    const typeTd = document.createElement("td");
+    typeTd.classList.add("type-container");
     for (let type of pokemon.types) {
-      const imgType = document.createElement('img')
-      imgType.classList.add("img-type")
-      imgType.src = type.image
-      typeTd.appendChild(imgType)
+      const imgType = document.createElement("img");
+      imgType.classList.add("img-type");
+      imgType.src = type.image;
+      typeTd.appendChild(imgType);
     }
-    row.append(imageTd,nameTd,typeTd)
-    listPokemons.appendChild(row)
+    row.append(imageTd, nameTd, typeTd);
+    listPokemons.appendChild(row);
   }
-
-
-
-  console.log(data) // ça affiche dans la console le contenu tu peux regarder
-
 }
 
-document.addEventListener("DOMContentLoaded", () => { // pour lancer des trucs au lancement de la page
+document.addEventListener("DOMContentLoaded", () => {
   getPokemon();
 });
-
-//audio de la nav bar
-const audio = document.getElementById("bg-music");
-const imgs = document.querySelectorAll(".nav-buttons img");
-let x = null;
-
-function changeState(newState) {
-  imgs.forEach(img => img.classList.remove("active"));
-  x = newState;
-  imgs[x].classList.add("active");
-
-  if (x == 1) {
-    audio.play();
-  } else if (x == 2) {
-    audio.pause();
-  }
-}
-
-document.getElementById("play-btn").addEventListener("click", () => changeState(1));
-document.getElementById("pause-btn").addEventListener("click", () => changeState(2));
