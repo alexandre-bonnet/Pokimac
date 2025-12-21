@@ -12,6 +12,12 @@ header {
     0 -6px 0 0 var(--green-4), 0 6px 0 0 var(--green-4);
 }
 
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 nav {
   display: flex;
   flex-direction: column;
@@ -50,14 +56,6 @@ p {
   font-size: 0.8rem;
   color: var(--green-1);
 }
-
-.navButtons {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 
 #aboutWindow {
   width: 70%;
