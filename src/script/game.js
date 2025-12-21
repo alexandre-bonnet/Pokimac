@@ -51,7 +51,16 @@ function submitAnswer(e) {
       endGame();
     }
   } else {
-    alert("Pas bon !");
+    input.classList.add("error");
+    const imageContainer = document.getElementById("image-container");
+    const submitButton = document.getElementById("submit-answer");
+    imageContainer.classList.add("error");
+    submitButton.classList.add("error");
+    setTimeout(() => {
+      imageContainer.classList.remove("error");
+      input.classList.remove("error");
+      submitButton.classList.remove("error");
+    }, 1000);
   }
 }
 

@@ -87,6 +87,11 @@ input[type="text"] {
     0 -6px 0 0 var(--green-3), 0 6px 0 0 var(--green-3);
 }
 
+.error {
+  box-shadow: -6px 0 0 0 red, 6px 0 0 0 red, 0 -6px 0 0 red, 0 6px 0 0 red !important;
+  animation: ErrorMove 0.5s infinite linear;
+}
+
 main input[type="text"] {
   width: 100%;
 }
@@ -185,5 +190,23 @@ dialog h2 {
 
   dialog h2 {
     font-size: 1.5rem;
+  }
+}
+
+@keyframes ErrorMove {
+  from {
+    transform: translateX(0px);
+  }
+  25% {
+    transform: translateX(-20px);
+  }
+  50% {
+    transform: translateX(0px);
+  }
+  75% {
+    transform: translateX(20px);
+  }
+  to {
+    transform: translateX(0px);
   }
 }
