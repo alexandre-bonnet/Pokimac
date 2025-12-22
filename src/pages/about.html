@@ -7,10 +7,10 @@
     <link
       rel="icon"
       type="image/x-icon"
-      href="../elements/images/favicon.svg"
+      href="/src/elements/images/favicon.svg"
     />
-    <link rel="stylesheet" href="../style/style.css" />
-    <link rel="stylesheet" href="../style/about.css" />
+    <link rel="stylesheet" href="/src/style/style.css" />
+    <link rel="stylesheet" href="/src/style/about.css" />
   </head>
 
   <body>
@@ -19,30 +19,30 @@
         <div class="nav-menu">
           <a href="/game">Game</a>
           <a href="/pokidex">Pokidex</a>
-          <a href="/score">Scores</a>
+          <a href="/scores">Scores</a>
           <a href="/about">About</a>
         </div>
         <div class="music-controls">
           <a href="/home"
             ><img
-              src="../elements/images/button-back.png"
+              src="/src/elements/images/button-back.png"
               alt="back-home-button"
           /></a>
           <button onclick="playMusic()">
             <img
-              src="../elements/images/play-button.png"
+              src="/src/elements/images/play-button.png"
               alt="Lecture de musique"
             />
           </button>
           <button onclick="pauseMusic()">
             <img
-              src="../elements/images/pause-button.png"
+              src="/src/elements/images/pause-button.png"
               alt="Pause sur la musique"
             />
           </button>
           <audio
             id="bg-music"
-            src="../elements/audio/opening-song.mp3"
+            src="/src/elements/audio/opening-song.mp3"
             loop
           ></audio>
         </div>
@@ -51,7 +51,7 @@
     <main>
       <h1>About</h1>
       <div id="about-window">
-        <img id="item-0" src="../elements/images/coco.png" alt="" />
+        <img id="item-0" src="/src/elements/images/coco.png" alt="" />
         <p id="item-1">
           Le Projet a été pensé et crée par 3 supers IMAC 1 : Coco, Léna et Alex
           ! <br />Il se base sur l’API Pokimac, elle-même inspirée de PokéAPI.
@@ -61,8 +61,8 @@
           Pokémon de toutes les générations. Le bouton Aide permet de déflouter
           le Pokémon : plus tu le défloutes, moins tu gagnes de points.
         </p>
-        <img id="item-3" src="../elements/images/lena.png" alt="" />
-        <img id="item-4" src="../elements/images/alex.png" alt="" />
+        <img id="item-3" src="/src/elements/images/lena.png" alt="" />
+        <img id="item-4" src="/src/elements/images/alex.png" alt="" />
         <p id="item-5">
           Si tu as besoin de réviser avant de jouer, le Pokidex est là pour
           t’aider ! <br />Attrapez-les tous !
@@ -70,6 +70,6 @@
       </div>
     </main>
     <footer><p>©2025 IMAC GAME</p></footer>
-    <script src="../script/navbar.js"></script>
+    <script src="/src/script/navbar.js"></script>
   </body>
 </html>

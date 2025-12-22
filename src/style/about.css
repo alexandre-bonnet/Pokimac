@@ -1,5 +1,5 @@
 body {
-  background-image: url("../elements/images/home-backrgound.png");
+  background-image: url("/src/elements/images/home-backrgound.png");
   max-height: 100%;
 }
 

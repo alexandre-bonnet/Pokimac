@@ -1,5 +1,5 @@
 body {
-  background-image: url("../elements/images/grass-background.png");
+  background-image: url("/src/elements/images/grass-background.png");
   max-width: 100%;
 }
 
